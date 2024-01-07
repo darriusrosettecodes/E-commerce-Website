@@ -1,0 +1,890 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* NAVBAR */
+.nav-bar{   
+    background-color: white;
+    padding: 25px 75px;
+}
+.nav-bar .nav-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-bar img{
+    height: 40px;
+}
+.nav-bar .nav-links ul{
+    list-style-type: none;
+}
+.nav-bar .nav-links ul li{
+    display: inline;
+    padding: 20px;
+}
+.nav-bar .nav-links ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: .2s;
+}
+.nav-bar .nav-links ul li a:hover{
+    color: tomato;
+}
+.nav-bar .icons ul{
+    list-style-type: none;
+}
+.nav-bar .icons ul li{
+    display: inline;
+    padding: 10px;
+    position: relative;
+}
+.nav-bar .icons ul li i{
+    font-size: 1.1em;
+}
+.nav-bar .icons #num{
+    position: absolute;
+    background-color: tomato;
+    color: white;
+    font-size: .6em;
+    top: -5px;
+    right: -5px;
+    border-radius: 50%;
+    padding: 6px;
+}
+.nav-bar .menu-button{
+    display: none;
+    font-size: 1.5em;
+    background-color: tomato;
+    padding: 10px;
+    color: white;
+}
+.nav-bar .search-bar{
+    margin-top: 15px;
+    width: 100%;
+    height: 2.5em;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    display: none;
+}
+
+/* MENU NAVBAR */
+.menu-nav-bar{
+    opacity: 0;
+    display: none;
+    transition: opacity .5s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color:white; 
+    border: 1px solid black; 
+    z-index: 998;
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+}
+.menu-nav-bar.active {
+    opacity: 1; /* Opacity 1 when active */
+    display: block;
+  }
+.menu-nav-bar .close-menu-button{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2em;
+    color: black;
+}
+.menu-nav-bar img{
+    display: block;
+    margin: 50px auto 0px auto;
+}
+.menu-nav-bar .nav-links{
+    font-size: 1.3em;
+    margin:50px;
+}
+.menu-nav-bar .nav-links ul{
+    list-style-type: none;
+}
+.nav-links ul li{
+    margin-top: 25px;
+}
+.menu-nav-bar .nav-links ul li a{
+    text-decoration: none;
+}
+.menu-nav-bar .icons{
+    color: black;
+    margin: 50px;
+}
+.menu-nav-bar .icons ul{
+    list-style-type: none;
+}
+.menu-nav-bar .icons ul li{
+    display: inline;
+}
+.menu-nav-bar .icons ul li i{
+    margin:15px 0px;
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+.menu-nav-bar .icons span{
+    margin-left: -5px;
+    font-size: 1.3em;
+}
+.menu-nav-bar .icons #num{
+    background-color: tomato;
+    margin-left: 10px;
+    display: inline;
+    color: white;
+    font-size: .7em;
+    border-radius: 50%;
+    padding: 6px;
+}
+.overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 996; 
+}
+
+/* MAIN SECTION */
+.main{
+    background-color: blue;
+    padding: 150px 50px;
+    background-image: url('Images/main-background.png');
+}
+.main-cont{
+    width: 35%;
+    margin-left: 100px;
+}
+.main-cont #h1-1{
+    font-size: 3em;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+.main-cont #h1-2{
+    font-size: 3em;
+    width: 100%;
+    font-weight:600;
+    margin-bottom:25px ;
+}
+.main-cont p{
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.main-cont button{
+    padding: 10px;
+    background-color: tomato;
+    width: 150px;
+    color:white;
+    font-size: 1.2em;
+    border: none;
+}
+
+/* COLLECTIONS SECTION */
+.collections-section{
+    margin: 50px 20px;
+}
+.collection{
+    display: inline-block;
+    position: relative;
+    max-width: 375px;
+    text-align: center;
+    margin: 20px;
+}
+.collection h2{
+    position: absolute;
+    font-size: 2em;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 2;
+}
+.collection img{
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+/* BESTSELLER SECTION */
+.bestseller-section{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.bestseller-section .bestseller-section-title{
+    font-size: 2.6em;
+    margin-bottom: 30px;
+}
+.bestseller-section .bestseller-buttons{
+    margin-bottom: 30px;
+}
+.bestseller-section .bestseller-buttons button{
+    padding: 10px;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 1em;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+}
+.active-product{
+    border: none;
+    color: white;
+    background-color: tomato;
+}
+.item {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    max-width: 300px;
+} 
+.item .image {
+    position: relative;
+}
+.item .image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.item .image i.fa-solid {
+    position: absolute;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    padding: 8px;
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.item .image:hover i.fa-solid{
+    opacity: 1;
+}
+.item .price{
+    color: tomato;
+}
+.item .image i.fa-bag-shopping {
+    top: 10px; 
+    right: 10px; 
+}
+.item .image i.fa-heart {
+    top: 60px; 
+    right: 10px; 
+}
+.item .type{
+    padding-top: 20px;
+}
+.item h3{
+    margin: 10px;
+}
+
+/* SALE SECTION */
+.sale-section{
+    margin: 75px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sale-section .left-side,
+.sale-section .right-side{
+    position: relative;
+    max-width: 600px;
+    margin: 0 10px;
+}
+.sale-section .text-overlay{
+    position: absolute;
+    top:50%;
+    left: 10%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: white;
+}
+.sale-section .text-overlay h4,
+.sale-section .text-overlay h1,
+.sale-section .text-overlay .shop-now {
+    margin-bottom: 10px;
+}
+.shop-now{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.shop-now:hover{
+    text-decoration: none;
+}
+.sale-section img {
+    display: block;
+    width: 100%;
+    height:atuo;
+}
+
+/* NIKE SPECIAL SECTION */
+.nike-special{
+    margin: 100px 150px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.nike-special-img{
+    display: inline-block;
+    position: relative;
+    max-width: 600px;
+    text-align: center;
+}
+.nike-special-img img{
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+.nike-special-items .item .image img{
+    height: 300px;
+}
+.nike-special h2{
+    position: absolute;
+    top:20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+.nike-special .shop-now{
+    position: absolute;
+    bottom:30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+.nike-special-header h1{
+    font-size: 2.5em;
+    margin-left: 10px;
+}
+.nike-special .nike-special-shoes{
+    width: 75%;
+}
+.nike-special-items {
+    display: flex;
+    overflow-x: auto; 
+    white-space: nowrap; 
+}
+
+.item {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+/* SERVICES SECTION */
+.services{
+    margin:100px 150px;
+}
+.service{
+    display: inline-block;
+    margin: 30px;
+}
+.service-icon i{
+    background-color: tomato;
+    color: white;
+    font-size: 1.5em;
+    padding: 20px;
+    border-radius: 50%;
+}
+.service-details{
+    margin: 15px;
+}
+
+/* FOOTER */
+footer {
+    background-color: rgba(0, 0, 0, 0.116);
+    padding: 75px 100px;
+  }
+  
+  footer .top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .top-section i {
+    font-size: 1.5em;
+    margin: 5px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.178);
+  }
+  
+  footer .bottom-section {
+    display: flex;
+    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .bottom-section div {
+    flex: 0 0 100%; /* Full width on smaller screens */
+    margin-bottom: 20px; /* Spacing between sections */
+    padding-right: 15px; /* Add some space between sections */
+  }
+  
+  .bottom-section h2 {
+    text-decoration: underline;
+    margin: 25px 0px;
+  }
+  
+  .contact-us ul,
+  .my-account ul,
+  .opening-time ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .contact-us ul li,
+  .my-account ul li,
+  .opening-time ul li {
+    padding: 10px 0;
+    font-size: 1em;
+  }
+  
+  .contact-us ul li a,
+  .my-account ul li a {
+    color: black;
+  }
+  
+  .contact-us i {
+    font-size: 1.1em;
+    color: tomato;
+  }
+  
+  .my-account ul li::before {
+    content: '> ';
+  }
+  
+  .my-account ul li,
+  .opening-time ul li {
+    padding: 5px 0;
+  }
+  
+  .newsletter p {
+    margin-bottom: 20px;
+  }
+  
+  .newsletter input {
+    border: none;
+    height: 3em;
+  }
+  .subscribe-btn{
+    background-color: tomato;
+    border: none;
+    padding: 3px 7px;
+    height: 3em;
+}
+
+/* SHOPPING CART */
+.shopping-cart{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    background-color:rgb(231, 230, 230) ;
+    border: 1px solid black;
+    height: 100%;
+    overflow: scroll;
+    z-index: 999;
+}
+.shopping-cart .close-sidebar-button{
+    position: absolute;
+    font-size: 2em;
+    top: 10px;
+    right: 10px;
+}
+.shopping-cart h1{
+    margin: 10px;
+}
+.shopping-cart .details{
+    margin: 10px;
+    margin-bottom: 20px;
+}
+.shopping-cart .details h3{
+    margin-bottom: 5px;
+}
+.details .remove-from-cart{
+    background-color: tomato;
+    color: white;
+    margin-top: 5px;
+    padding: 4px;
+    border-radius: 15px;
+    border: none;
+}
+.cart-img{
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 120px;
+    width: 130px;
+}
+.shopping-cart h2{
+    margin: 10px;
+}
+.shopping-cart .check-out-btn{
+    display: block;
+    border: none;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 15px;
+    background-color: tomato;
+    color: white;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width:768px){
+    .nav-bar .nav-links{
+        display: none;
+    }
+    .nav-bar .icons {
+        display: none;
+    }
+    .nav-bar .menu-button{
+        display: block;
+    }
+    .shopping-cart{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .nav-bar{   
+        background-color: white;
+        padding: 20px 55px;
+    }
+    .nav-bar .menu-button{
+        padding: 8px;
+    }
+    .main{
+        padding: 90px 10px;
+         background-image: url('Images/main-background.png');
+    }
+    .main-cont{
+        width: 100%;
+        margin-left: 10px;
+    }
+    .main-cont #h1-1{
+        font-size: 2.2em;
+    }
+    .main-cont p{
+        font-size: 1em;
+    }
+    .main-cont #h1-2{
+        font-size:2.2em ;
+    }
+    .collections-section{
+        padding: 5px 0px;
+    }
+    .collection{
+        display: inline-block;
+        position: relative;
+        max-width: 335px;
+        text-align: center;
+        margin: 5px;
+    }
+    .collection h2{
+        font-size: 1.6em;
+    }
+    .item {
+        max-width: 255px;
+    }
+    .bestseller-section .bestseller-section-title{
+        font-size: 2.3em;
+        margin-bottom: 15px;
+    }
+    .sale-section{
+        margin: 50px 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .sale-section .left-side,
+    .sale-section .right-side{
+        margin: 10px 10px;
+    }
+    .nike-special{
+        margin: 100px 10px;
+    }
+    .nike-special-img{
+        display: none;
+    }
+    .nike-special .nike-special-shoes{
+        width: 100%;
+    }
+    .services{
+        margin:75px 0px;
+    }
+    .service-details h2{
+        font-size: 1.4em;
+    }
+    
+    footer {
+        padding: 30px; /* Adjust padding */
+        text-align: center;
+    } 
+    footer img{
+        height: 29px;
+    }
+    .top-section i{
+        font-size: 1em;
+    }
+    .bottom-section div {
+        flex: 0 0 100%; /* Full width on smaller screens */
+    }
+    
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .main{
+        padding: 90px 30px;
+        background-image: url('Images/main-background.png');
+    }
+    .main-cont{
+        margin-left: 20px;
+    }
+    .collection{
+        margin: 5px;
+    }
+    .collection{
+        display: inline-block;
+        position: relative;
+        max-width: 345px;
+        text-align: center;
+        margin: 20px;
+    }
+    .collection h2{
+        font-size: 1.6em;
+    }
+    .item {
+        max-width: 255px;
+    }
+    .sale-section{
+        margin: 75px 50px;
+        display: flex;
+        flex-direction: column;
+    }
+    .sale-section .left-side,
+    .sale-section .right-side{
+        margin: 10px 10px;
+    }
+    .nike-special{
+        margin: 100px 25px;
+    }
+    .nike-special-img{
+        display: none;
+    }
+    .nike-special .nike-special-shoes{
+        width: 100%;
+    }
+    .services{
+        margin:75px 0px;
+    }
+    footer {
+        padding: 40px; /* Adjust padding */
+      }
+      
+      .bottom-section div {
+        flex: 0 0 50%; /* Two columns on medium screens */
+      }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .main{
+        padding: 100px 50px;
+        background-image: url('Images/main-background.png');
+    }
+    .main-cont{
+        margin-left: 30px;
+    }
+    .collection{
+        margin: 10px;
+    }
+    .item {
+        max-width: 255px;
+    }
+    .sale-section{
+        margin: 75px 10px;
+    }
+    .nike-special{
+        margin: 100px 25px;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+    }
+    .nike-special-img{
+        display: inline-block;
+        position: relative;
+        max-width: 300px;
+        text-align: center;
+    }
+    .nike-special-img img{
+        display: block;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+    }
+    .nike-special h2{
+        position: absolute;
+        width: 90%;
+        height: 15px;
+        top:20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+    }
+    .nike-special .shop-now{
+        position: absolute;
+        bottom:30px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+    }
+    .nike-special-header h1{
+        font-size: 2.3em;
+        margin-left: 10px;
+    }
+    .nike-special .nike-special-shoes{
+        width: 65%;
+    }
+    .services{
+        margin:75px;
+    }
+    footer {
+        padding: 40px; /* Adjust padding */
+      }
+      
+      .bottom-section div {
+        flex: 0 0 50%; /* Two columns on medium screens */
+      }
+
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .main{
+        padding: 100px 50px;
+        background-image: url('Images/main-background.png');
+    }
+    .main-cont{
+        margin-left: 50px;
+    }
+    .collections-section{
+        margin: 50px 20px;
+    }
+    .collection{
+        margin: 10px;
+    }
+    .collection h2{
+        font-size: 1.8em;
+    }
+    .collection img{
+        width: 95%;
+    }
+    .bestseller-section .bestseller-section-title{
+        font-size: 2.5em;
+        margin-bottom: 15px;
+    }
+    .bestseller-section .bestseller-buttons{
+        margin-bottom: 30px;
+    }
+    .bestseller-section .bestseller-buttons button{
+        padding: 10px;
+        margin: 5px;
+        font-size: .9em;
+    }
+    .item {
+        max-width: 275px;
+    }
+    .sale-section{
+        margin: 75px 90px;
+    }
+    .sale-section .left-side,
+    .sale-section .right-side{
+        position: relative;
+        max-width: 600px;
+        margin: 0 10px;
+    }
+    .nike-special{
+        margin: 100px 100px;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+    }
+    
+    .nike-special-img{
+        display: inline-block;
+        position: relative;
+        max-width: 400px;
+        text-align: center;
+    }
+    .nike-special-img img{
+        display: block;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+    }
+    .nike-special h2{
+        position: absolute;
+        width: 90%;
+        height: 15px;
+        top:20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+    }
+    .nike-special .shop-now{
+        position: absolute;
+        bottom:30px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+    }
+    .nike-special-header h1{
+        font-size: 2.3em;
+        margin-left: 10px;
+    }
+    .nike-special .nike-special-shoes{
+        width: 70%;
+    }
+    .nike-special-items {
+        display: flex;
+        overflow-x: auto; 
+        white-space: nowrap; 
+    }
+    .item {
+        display: inline-block;
+        margin-right: 20px; 
+    }
+    footer .bottom-section {
+        flex-wrap: nowrap; /* Prevent wrapping */
+      }
+    
+      .bottom-section div {
+        flex: 0 0 auto; /* Allow natural width for each div */
+        width: 25%; /* Keep the width at 25% */
+        margin-right: 0; /* Remove right margin between sections */
+      }
+}
+@media screen and (min-width: 1201px) {
+    footer .bottom-section {
+      flex-wrap: nowrap; /* Prevent wrapping */
+    }
+  
+    .bottom-section div {
+      flex: 0 0 auto; /* Allow natural width for each div */
+      width: 25%; /* Keep the width at 25% */
+      margin-right: 0; /* Remove right margin between sections */
+    }
+  }

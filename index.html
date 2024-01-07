@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- REGULAR NAVBAR -->
+    <nav class="nav-bar" id="home">
+        <div class="nav-content">
+            <a href="index.html"><img src="Images/logo.svg" alt="" class="logo"></a>
+
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#home" class="active-nav">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="icons">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-magnifying-glass search-button"></i></li>
+
+                    <li>
+                        <i class="fa-solid fa-bag-shopping open-cart-button">
+                        <h1 id="num">0</h1>
+                    </i></li>
+                </ul>
+            </div>
+
+            <i class="fa-solid fa-bars menu-button"></i>
+        </div>
+
+        <input type="text" class="search-bar" placeholder="   Search...">
+    </nav> 
+    
+
+    <!-- MENU NAVBAR -->
+    <nav class="menu-nav-bar">
+        <i class="fa-solid fa-xmark close-menu-button"></i>
+        <img src="Images/logo.svg" alt="" class="logo">
+
+        <div class="nav-links">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="icons">
+            <ul>        
+                <li class="open-cart-button">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>Cart</span>
+                    <h1 id="num">0</h1>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="overlay"></div>
+
+    <!-- MAIN SECTION -->
+    <main class="main">
+        <div class="main-cont">
+            <h1 id="h1-1">New&nbsp;Summer&nbsp;</h1>
+
+            <h1 id="h1-2">Shoes&nbsp;Collection&nbsp;</h1>
+
+            <p>Competently expedite alternative benefits whereas leading-edge catalysts for change. Globally leverage existing an expanded array of leadership.</p>
+
+            <button>Shop Now</button>
+        </div>
+    </main>
+
+    <!-- COLLECTIONS SECTION -->
+    <section class="collections-section">
+        <center>
+            <div class="collection">
+                <h2 style="z-index: 3;">MEN COLLECTIONS</h2>
+                <img style="z-index: 2;" src="Images/collection-1.jpg" alt="">
+            </div>
+
+            <div class="collection">
+                <h2>WOMEN COLLECTIONS</h2>
+                <img src="Images/collection-2.jpg" alt="">
+            </div>
+
+            <div class="collection">
+                <h2>SPORT COLLECTION</h2>
+                <img src="Images/collection-3.jpg" alt="">
+            </div>
+        </center>
+    </section>
+
+    <!-- BESTSELER SECTION -->
+    <section class="bestseller-section" id="products">
+        <h1 class="bestseller-section-title">Bestseller Products</h1>
+        <div class="bestseller-buttons">
+            <button id="all" class="active-product">All</button>
+            <button id="nike">Nike</button>
+            <button id="addidas">Addidas</button>
+        </div>
+
+        <center>
+            <div class="nike-shoes">
+                <div class="item" data-price="180.85">
+                    <div class="image">
+                        <img src="Images/bestseller1.jpg" alt="">
+                        <i class="fa-solid fa-bag-shopping add-to-cart"></i>
+                    </div>
+                    <span class="type">Men / Women</span>
+                    <h3>Nike Running Shoes</h3>
+                    <span class="price">$180.85</span>
+                </div>
+
+                <div class="item" data-price="190.85">
+                    <div class="image">
+                        <img src="Images/bestseller2.jpg" alt="">
+                        <i class="fa-solid fa-bag-shopping add-to-cart"></i>
+                    </div>
+                    <span class="type">Men / Sport</span>
+                    <h3>Nike Running Shoes</h3>
+                    <span class="price">$190.85</span>
+                </div>
+
+                <div class="item" data-price="160.85">
+                    <div class="image">
+                        <img src="Images/bestseller3.jpg" alt="">
+                        <i class="fa-solid fa-bag-shopping add-to-cart"></i>
+                    </div>
+                    <span class="type">Men / Women</span>
+                    <h3>Nike Air Max</h3>
+                    <span class="price">$160.85</span>
+                </div>
+
+                <div class="item" data-price="170.85">
+                    <div class="image">
+                        <img src="Images/bestseller4.jpg" alt="">
+                        <i class="fa-solid fa-bag-shopping add-to-cart"></i>
+                    </div>
+                    <span class="type">Men / Sport</span>
+                    <h3>Nike Basketball Shoes</h3>
+                    <span class="price">$170.85</span>
+                </div>
+            </div>
+
+            <div class="addidas-shoes">
+                <div class="item" data-price="100.85">
+                    <div class="image">
+                        <img src="Images/bestseller5.jpg" alt="">
+                        <i class="fa-solid fa-bag-shopping add-to-cart"></i>
+                    </div>
+                    <span class="type">Men / Women</span>
+                    <h3>Classic Addidas Shoes</h3>
+                    <span class="price">$100.85</span>
+                </div>
+
+                <div class="item" data-price="120.85">
+                    <div class="image">
+                        <img src="Images/bestseller6.png" alt="">
+                        <i class="fa-solid fa-bag-shopping add-to-cart"></i>
+                    </div>
+                    <span class="type">Men / Women</span>
+                    <h3>Addidas Sneakers Shoes</h3>
+                    <span class="price">$120.85</span>
+                </div>
+
+                <div class="item" data-price="180.85">
+                    <div class="image">
+                        <img src="Images/bestseller7.png" alt="">
+                        <i class="fa-solid fa-bag-shopping add-to-cart"></i>
+                    </div>
+                    <span class="type">Men / Women</span>
+                    <h3>Addidas Basketball Shoes</h3>
+                    <span class="price">$180.85</span>
+                </div>
+                
+                <div class="item" data-price="160.85">
+                    <div class="image">
+                        <img src="Images/bestseller8.png" alt="">
+                        <i class="fa-solid fa-bag-shopping add-to-cart"></i>
+                    </div>
+                    <span class="type">Men / Women</span>
+                    <h3>Addidas Casual Shoes</h3>
+                    <span class="price">$160.85</span>
+                </div>
+            </div>
+        </center>
+        </div>
+    </section>
+
+    <!-- SALE SECTION -->
+    <section class="sale-section">
+        <div class="left-side">
+            <img src="Images/sale-section-1.jpg" alt="">
+            <div class="text-overlay">
+                <h4>Adidas Shoes</h4>
+                <h1>The Summer Sale <br>
+                Off 50%</h1>
+                <span class="shop-now">Shop Now</span>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <img src="Images/sale-section-2.jpg" alt="">
+            <div class="text-overlay">
+                <h4>Nike Shoes</h4>
+                <h1>Make Yourself <br>
+                Keep Sporty</h1>
+                <span class="shop-now">Shop Now</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="nike-special">
+        <div class="nike-special-img">
+            <img src="Images/nike-section.jpg" alt="">
+            <h2>New Trend Edition</h2>
+            <span class="shop-now">Explore All</span>
+        </div>
+
+        <div class="nike-special-shoes">
+            <div class="nike-special-header">
+                <h1>Nike Special</h1>
+            </div>
+
+            <div class="nike-special-items">
+                <div class="item" data-price="160.85">
+                    <div class="image">
+                        <img src="Images/special1.png" alt="">
+                        <i class="fa-solid fa-bag-shopping add-to-cart"></i>
+                    </div>
+                    <span class="type">Men / Women</span>
+                    <h3>Nike Running Shoes</h3>
+                    <span class="price">$160.85</span>
+                </div>
+
+                <div class="item" data-price="180.85">
+                    <div class="image">
+                        <img src="Images/special2.png" alt="">
+                        <i class="fa-solid fa-bag-shopping add-to-cart"></i>
+                    </div>
+                    <span class="type">Men / Women</span>
+                    <h3>Nike Basketball Shoes</h3>
+                    <span class="price">$180.85</span>
+                </div>
+
+                <div class="item" data-price="190.85">
+                    <div class="image">
+                        <img src="Images/special3.png" alt="">
+                        <i class="fa-solid fa-bag-shopping add-to-cart"></i>
+                    </div>
+                    <span class="type">Men / Sport</span>
+                    <h3>Nike Slippers</h3>
+                    <span class="price">$190.85</span>
+                </div>
+
+                <div class="item" data-price="170.85">
+                    <div class="image">
+                        <img src="Images/special4.png" alt="">
+                        <i class="fa-solid fa-bag-shopping add-to-cart"></i>
+                    </div>
+                    <span class="type">Men / Sport</span>
+                    <h3>Nike Low Top Shoes</h3>
+                    <span class="price">$170.85</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <center>
+            <div class="service">
+                <div class="service-icon">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+
+                <div class="service-details">
+                    <h2>FREE SHIPPING</h2>
+                    <p>All orders over <span class="price">$150</span></p>
+                </div>
+            </div>
+
+            <div class="service">
+                <div class="service-icon"><i class="fa-solid fa-credit-card"></i></div>
+                <div class="service-details">
+                    <h2>QUICK PAYMENT</h2>
+                    <p>100% secure payment</p>
+                </div>
+            </div>
+
+            <div class="service">
+                <div class="service-icon"><i class="fa-solid fa-box"></i></div>
+                <div class="service-details">
+                    <h2>FREE RETURNS</h2>
+                    <p>Money back in 30 days</p>
+                </div>
+            </div>
+
+            <div class="service">
+                <div class="service-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+                <div class="service-details">
+                    <h2>24/7 SUPPORT</h2>
+                    <p>Get quick support</p>
+                </div>
+            </div>
+        </center>
+    </section>
+
+    <footer id="contact">
+        <div class="top-section">
+            <img src="Images/logo.svg" alt="">
+
+            <div class="socials">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-pinterest-p"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="bottom-section">
+            <div class="contact-us">
+                <h2>Contact Us</h2>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>2751 S Parker Rd, Aurora, CO 80014</p>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+5555555555">+15573436257</a>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:footcap@help.com">footcap@help.com</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="my-account">
+                <h2>My Account</h2>
+
+                <ul>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">View Cart</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">Compare</a></li>
+                    <li><a href="#">New Products</a></li>
+                </ul>
+            </div>
+
+            <div class="opening-time">
+                <h2>Opening Time</h2>
+
+                <ul>
+                    <li>Mon - Tue: 8AM - 10PM</li>
+                    <li>Wed: 8AM - 7PM</li>
+                    <li>Fri: 7AM - 12PM</li>
+                    <li>Sat 9AM - 8PM</li>
+                    <li>Sun: Closed</li>
+                </ul>
+            </div>
+
+            <div class="newsletter">
+                <h2>Newsletter</h2>
+                <p>Authoritatively morph 24/7 potentialities with error-free partnerships.</p>
+                <input type="text" placeholder="  Email Adress"><button class="subscribe-btn">Subscribe</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SHOPPING CART -->
+    <div class="shopping-cart">
+        <i class="fa-solid fa-xmark close-sidebar-button"></i>
+        <h1>Your Cart</h1>
+        
+        <div class="cart-items"></div>
+
+        <h2>Total: <span class="total">0</span></h2>
+        <button class="check-out-btn">Check Out</button>
+    </div>
+</body>
+</html>
