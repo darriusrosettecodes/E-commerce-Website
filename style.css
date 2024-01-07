@@ -570,7 +570,7 @@ footer {
     }
     .main{
         padding: 90px 10px;
-         background-image: url('/main-background.png');
+         background-image: url('main-background.png');
     }
     .main-cont{
         width: 100%;
@@ -649,7 +649,7 @@ footer {
 @media screen and (min-width: 577px) and (max-width: 768px) {
     .main{
         padding: 90px 30px;
-        background-image: url('/main-background.png');
+        background-image: url('main-background.png');
     }
     .main-cont{
         margin-left: 20px;
@@ -703,7 +703,7 @@ footer {
 @media screen and (min-width: 769px) and (max-width: 992px) {
     .main{
         padding: 100px 50px;
-        background-image: url('/main-background.png');
+        background-image: url('main-background.png');
     }
     .main-cont{
         margin-left: 30px;
@@ -774,7 +774,7 @@ footer {
 @media screen and (min-width: 993px) and (max-width: 1200px) {
     .main{
         padding: 100px 50px;
-        background-image: url('/main-background.png');
+        background-image: url('main-background.png');
     }
     .main-cont{
         margin-left: 50px;
