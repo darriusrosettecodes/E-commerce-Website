@@ -74,7 +74,6 @@
 
 /* MENU NAVBAR */
 .menu-nav-bar{
-    opacity: 0;
     display: none;
     transition: opacity .5s ease;
     position: fixed;
